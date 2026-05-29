@@ -22,6 +22,13 @@
 -   Don't run during rendering
 -   Don't need to be pure functions
 
+
+### Pure Functions
+1. It minds its own business. It does not change any objects or variables that existed before it was called.
+2. Same inputs, same output. Given the same inputs, a pure function should always return the same result.
+3. React assumes that every component you write is a pure function.
+4. StrictMode helps to detect impure functions
+
 ### Why Pure Functions Matter
 
 1. Components can run in different environments (e.g., server-side)
