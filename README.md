@@ -232,6 +232,22 @@ Components re-render when:
 -   Higher-Order Components (HOC)
 -   Handle sorting and filtering in URL
 
+## React Compiler
+
+React Compiler automatically applies the equivalent of manual memoization, ensuring that only the relevant parts of an app re-render as state changes. It focuses on two main use cases:
+
+1. **Skipping cascading re-renders of components**
+   Re-rendering `<Parent />` causes many components in its component tree to re-render, even though only `<Parent />` has changed.
+
+2. **Skipping expensive calculations inside React components and hooks**
+   For example, calling `expensivelyProcessAReallyLargeArrayOfObjects()` inside a component or hook that needs that data.
+
+### Important Limitations
+
+1. React Compiler only memoizes React components and hooks, not every function.
+2. React Compiler's memoization is not shared across multiple components or hooks.
+   zation is not shared across multiple components or hooks
+
 ## Next.js Concepts
 
 ### Fetching Strategies
